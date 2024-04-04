@@ -6,6 +6,7 @@ import yfinance as yf
 import pandas as pd
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Sample data for portfolio and watchlist
 portfolio_data = pd.DataFrame([
