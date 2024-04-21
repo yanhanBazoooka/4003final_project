@@ -48,11 +48,11 @@ def generate_table(stock_list, interval='1mo', table_id='portfolio-table'):
 app.layout = dbc.Container([
     dbc.NavbarSimple(
         children=[],
-        brand="Hey Julie, Wassssssssup",
+        brand="Welcome to Simply Trade💹",
         brand_href="#",
         color="rgb(191, 236, 223)",
         dark=False,
-        className="mb-4 w-100 justify-content-center",  # Use justify-content-center to center the brand
+        className="mb-4 w-100 justify-content-center",  
     ),
     
     dbc.Row([
@@ -92,11 +92,11 @@ app.layout = dbc.Container([
         
         dbc.Col([
             dbc.Row([
-                dbc.Col(html.H4("My Portfolio:", className="text-center"), width=12),
+                dbc.Col(html.H4("My Portfolio🐂", className="text-center"), width=12),
                 dbc.Col(html.Div(id='portfolio-container', children=generate_table(portfolio_stocks, '1mo', 'portfolio-table')), width=12, style={'height': '45vh'}),
             ], className="mb-2"),
             dbc.Row([
-                dbc.Col(html.H4("My Watchlist:", className="text-center"), width=12),
+                dbc.Col(html.H4("My Watchlist👀", className="text-center"), width=12),
                 dbc.Col(html.Div(id='watchlist-container', children=generate_table(watchlist_stocks, '1mo', 'watchlist-table')), width=12, style={'height': '45vh'})
             ])
         ], md=4, style={'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'space-between'}),
@@ -141,7 +141,7 @@ def create_figure(stock, interval):
         decreasing_line_color='red'
     )])
     figure.update_layout(
-        title=f'{stock} Stock Candlestick Chart',
+        title=f'{stock} Candlestick Chart📈📉',
         xaxis_title='Date',
         yaxis_title='Price',
         plot_bgcolor='white',
