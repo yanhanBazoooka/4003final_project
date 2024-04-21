@@ -38,6 +38,8 @@ This stock trading dashboard provides real-time insights into stock performances
 ## Challenges Overcome
 
 - **Managing State with Callbacks**: Ensuring that the dashboard components update consistently and correctly based on user interactions required careful management of Dash callbacks and component states.
+    - Example: these graphs are synced:
+    - ![callback sync1](image.png)
 - **Performance Optimization**: Initially, the dashboard experienced lags due to inefficient data handling and excessive callback triggers. Optimizing these callbacks and the data fetching process significantly improved the responsiveness.
 - **Responsive Design**: Integrating Bootstrap with Dash initially presented challenges in aligning components as desired, especially when aiming for a clean, professional look across devices.
 
