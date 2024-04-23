@@ -4,8 +4,9 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 import yfinance as yf
 import pandas as pd
-
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
+FA = "https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+external_stylesheets = [dbc.themes.BOOTSTRAP, FA]
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
 server = app.server
 
 portfolio_stocks = ['AAPL', 'TSLA', 'NVDA', 'GOOGL', 'AMZN']
@@ -33,7 +34,11 @@ def generate_table(stock_list, interval, table_id):
 
 app.layout = dbc.Container([
     dbc.NavbarSimple(
-        children=[],
+        children=[
+            dbc.NavItem(dbc.NavLink(html.I(className="fab fa-github"), href="https://github.com/yanhanBazoooka", target="_blank", className="me-3")),
+            dbc.NavItem(dbc.NavLink(html.I(className="fab fa-linkedin"), href="www.linkedin.com/in/hanyan0606", target="_blank", className="me-3")),
+            dbc.NavItem(dbc.NavLink(html.I(className="fas fa-envelope"), href="mailto:your.email@example.com", target="_blank")),
+        ],
         brand="Welcome to Simply Trade💹",
         brand_href="#",
         color="rgb(191, 236, 223)",
